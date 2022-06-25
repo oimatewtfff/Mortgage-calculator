@@ -5,4 +5,4 @@ from .models import MortgageOffers
 class MortgageOffersSerializer(serializers.ModelSerializer):
     class Meta:
         model = MortgageOffers
-        fields = ('bank_name', 'mortgage_rate', 'mortgage_payment')
+        fields = ('id','payment','bank_name','term_min','term_max','rate_min','rate_max','payment_min','payment_max')
