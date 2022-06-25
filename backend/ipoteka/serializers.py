@@ -1,8 +1,13 @@
-from rest_framework import fields, serializers
-from .models import MortgageOffers
+from rest_framework import serializers
 
 
-class MortgageOffersSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = MortgageOffers
-        fields = ('id','payment','bank_name','term_min','term_max','rate_min','rate_max','payment_min','payment_max')
+class MortgageOffersSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    payment = serializers.IntegerField()
+    bank_name = serializers.CharField()
+    term_min = serializers.IntegerField() # Срок ипотеки, ОТ
+    term_max = serializers.IntegerField() # Срок ипотеки, ДО
+    rate_min = serializers.FloatField() # Ставка, ОТ
+    rate_max = serializers.FloatField() # Ставка, ДО
+    payment_min = serializers.IntegerField() # Сумма кредита, ОТ
+    payment_max = serializers.IntegerField() # Сумма кредита, ДО
