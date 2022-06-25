@@ -6,11 +6,12 @@ from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
 
 from .routers import router
+from ipoteka.views import MortgageOffersAPIView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
-    path("", include("ipoteka.urls")),
+    path("api/v1/offer/", MortgageOffersAPIView.as_view()),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
 ]
