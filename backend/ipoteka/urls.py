@@ -3,10 +3,10 @@ from rest_framework import routers
 from . import views
 
 router = routers.DefaultRouter()
-router.register(r'mortgage_offers', views.MortgageOffersViewSet)
+router.register(r'offer', views.MortgageOffersViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
