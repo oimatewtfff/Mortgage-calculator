@@ -1,7 +1,7 @@
 import os
 import sys
 import unittest
-import faker.config
+# import faker.config
 from django.utils.translation import gettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     # apps
     # "images.apps.ImagesConfig",
+    "ipoteka.apps.IpotekaConfig"
 ]
 
 MIDDLEWARE = [
@@ -73,8 +74,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
         "USER": "postgres",
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": "db",
+        "PASSWORD": 9369,
+        "HOST": "localhost",
         "PORT": 5432,
         "CONN_MAX_AGE": 600,
     }
