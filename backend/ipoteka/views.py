@@ -1,7 +1,9 @@
+from signal import raise_signal
 from django.forms import model_to_dict
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from yaml import serialize
 
 from .models import MortgageOffers
 from .serializers import MortgageOffersSerializer
@@ -13,14 +15,22 @@ class MortgageOffersAPIView(APIView):
         return Response({'offer': MortgageOffersSerializer(offers, many=True).data})
 
     def post(self, request):
-        offer_new = MortgageOffers.objects.create(
-            bank_name=request.data['bank_name'],
-            term_min=request.data['term_min'],
-            term_max=request.data['term_max'],
-            rate_min=request.data['rate_min'],
-            rate_max=request.data['rate_max'],
-            payment_min=request.data['payment_min'],
-            payment_max=request.data['payment_max']
-        )
-        return Response({'offer': MortgageOffersSerializer(offer_new).data})
+        serializer = MortgageOffersSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({'offer': serializer.data})
     
+    def patch(self, request, *args, **kwargs):
+        id = kwargs.get("id", None)
+        if not id:
+            return Response({'error': 'Method put not allowed'})
+
+        try:
+            instance = MortgageOffers.objects.get(id=id)
+        except:
+            return Response({'error': 'Object does not exists'})
+
+        serializer = MortgageOffersSerializer(data=request.data, instance=instance, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response({'offer': serializer.data})
