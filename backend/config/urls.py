@@ -4,15 +4,14 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
-
+from ipoteka.views import MortgageOffersViewSet
 from .routers import router
-from ipoteka.views import MortgageOffersAPIView
+
+router.register(r'offer', MortgageOffersViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
-    path("api/v1/offer/", MortgageOffersAPIView.as_view()),
-    path("api/v1/offer/<int:id>/", MortgageOffersAPIView.as_view()),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path("api/docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
 ]
