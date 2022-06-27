@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # third party
     "rest_framework",
     "drf_spectacular",
+    'django_filters',
     # apps
     # "images.apps.ImagesConfig",
     "ipoteka.apps.IpotekaConfig"
@@ -130,8 +131,7 @@ SITE_ID = 1
 # REST
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     # Включение и отключения режима дебагера в браузере
-    # 'DEFAULT_RENDERER_CLASSES': [
-    #     'rest_framework.renderers.JSONRenderer'
-    # ]
+    # 'DEFAULT_RENDERER_CLASSES': ['rest_framework.renderers.JSONRenderer']
 }
