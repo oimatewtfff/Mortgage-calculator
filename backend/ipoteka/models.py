@@ -3,7 +3,7 @@ from django.db import models
 
 class MortgageOffers(models.Model):
     id = models.BigAutoField(primary_key=True)
-    payment = models.IntegerField(default=0)
+    payment = models.IntegerField(default=0) # Платеж в месяц
     bank_name = models.CharField(max_length=100)
     term_min = models.IntegerField(default=0)  # Срок ипотеки, ОТ
     term_max = models.IntegerField(default=0)  # Срок ипотеки, ДО
