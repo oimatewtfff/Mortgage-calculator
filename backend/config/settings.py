@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     'django_filters',
+    'corsheaders',
     # apps
     # "images.apps.ImagesConfig",
     "ipoteka.apps.IpotekaConfig"
@@ -42,6 +43,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.contrib.sites.middleware.CurrentSiteMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 if DEBUG:
@@ -50,9 +52,15 @@ if DEBUG:
 
 ROOT_URLCONF = "config.urls"
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
+        'DIRS': [os.path.join(BASE_DIR, 'frontend/public')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
