@@ -9,7 +9,8 @@ npm start
 py manage.py runserver
 ```
 * в директории backend
-
+### Зависимости
+Все необходимые библиотеки можно найти в файлах frontend/package.json и requirements.txt
 # Шаблон тестового задания
 
 ## Техническое задание
