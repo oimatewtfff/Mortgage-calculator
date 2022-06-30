@@ -11,7 +11,7 @@ from .serializers import MortgageOffersSerializer
 
 class MortgageFilter(filters.FilterSet):
     price = filters.NumberFilter(field_name="payment_min", lookup_expr='lte')
-    deposit = filters.NumberFilter(field_name="payment")  # TODO
+    # deposit = filters.NumberFilter(field_name="payment")  # TODO 
     term = filters.NumberFilter(field_name="term_min", lookup_expr='lte')
 
     # def get_past_n_hours(self, queryset, field_name, value):
