@@ -33,7 +33,7 @@ function App() {
   return (
     <Container fluid>
       <Row className="justify-content-md-center mt-5 text-center">
-      <h1 class="display-6">Ипотечный калькулятор</h1>
+        <h1 class="display-6">Ипотечный калькулятор</h1>
       </Row>
       <Row className="justify-content-md-center mt-5">
         <Col sm={7}>
@@ -95,14 +95,6 @@ function App() {
       </Row>
       <Row className="justify-content-md-center mt-5">
         <Col md="auto">
-        <figure class="text-center">
-  <blockquote class="blockquote">
-  <p class="lead">Сортировка ипотечной ставки</p>
-  </blockquote>
-  <figcaption class="blockquote-footer">
-    <cite title="Source Title">после выбора снова нажми "Показать"</cite>
-  </figcaption>
-</figure>
           <form onSubmit={handleSubmit}>
             <div class="input-group input-group-sm mb-3">
               <input
@@ -123,6 +115,11 @@ function App() {
               />
             </div>
           </form>
+          <figure class="text-center">
+            <figcaption class="blockquote-footer">
+              <cite title="Source Title">после выбора снова нажми "Показать"</cite>
+            </figcaption>
+          </figure>
         </Col>
       </Row>
       <Row className="justify-content-md-center mt-5">
