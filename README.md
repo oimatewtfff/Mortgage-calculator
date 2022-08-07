@@ -1,18 +1,3 @@
-# Решение
-## Решение выполнено с использованием React для фронтенда 
-### Запуск решения
-```shell
-npm start
-```
-* в директории frontend
-```shell
-py manage.py runserver
-```
-* в директории backend
-### Зависимости
-Все необходимые библиотеки можно найти в файлах frontend/package.json и requirements.txt
-# Шаблон тестового задания
-
 ## Техническое задание
 
 Необходимо разработать калькулятор ипотечных предложений на основе [примера](https://www.sravni.ru/ipoteka/?mortgagePurpose=1&creditAmount=11849421&initialAmount=1500000&mortgageTerm=120).
@@ -51,3 +36,18 @@ py manage.py runserver
 1) Django. Обязательно
 2) [DRF](https://www.django-rest-framework.org/). Обязательно
 3) [django-filters](https://django-filter.readthedocs.io/en/stable/guide/usage.html). По желанию
+
+
+# Решение
+## Решение выполнено с использованием React для фронтенда 
+### Запуск решения
+```shell
+npm start
+```
+* в директории frontend
+```shell
+py manage.py runserver
+```
+* в директории backend
+### Зависимости
+Все необходимые библиотеки можно найти в файлах frontend/package.json и requirements.txt
