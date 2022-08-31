@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.urls import include, path
 from drf_spectacular.views import SpectacularSwaggerView, SpectacularAPIView
 
-from ipoteka.views import MortgageOffersViewSet
+from mortgage.views import MortgageOffersViewSet
 from .routers import router
 
 router.register(r'offer', MortgageOffersViewSet)

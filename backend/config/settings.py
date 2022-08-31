@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'corsheaders',
     # apps
     # "images.apps.ImagesConfig",
-    "ipoteka.apps.IpotekaConfig"
+    "mortgage.apps.MortgageConfig"
 ]
 
 MIDDLEWARE = [
@@ -83,8 +83,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "postgres",
         "USER": "postgres",
-        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
-        "HOST": "db",
+        "PASSWORD": 9369,
+        "HOST": "localhost",
         "PORT": 5432,
         "CONN_MAX_AGE": 600,
     }
@@ -140,6 +140,5 @@ SITE_ID = 1
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    # Включение и отключения режима дебагера в браузере
     # 'DEFAULT_RENDERER_CLASSES': ['rest_framework.renderers.JSONRenderer']
 }

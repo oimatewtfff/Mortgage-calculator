@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class IpotekaConfig(AppConfig):
+class MortgageConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'ipoteka'
+    name = 'mortgage'
