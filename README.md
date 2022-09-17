@@ -42,17 +42,20 @@
 ## Решение выполнено с использованием React для фронтенда 
 ### Запуск решения
 
-* в директории frontend
+
 ```shell
+# в директории frontend
 npm install
 npm start
 ```
+
 ```shell
 py -m venv venv
 pip install -r requirements.txt
 ```
-* в директории backend
+
 ```shell
+# в директории backend
 py manage.py runserver
 ```
 
