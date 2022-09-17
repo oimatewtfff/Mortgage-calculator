@@ -55,5 +55,6 @@ pip install -r requirements.txt
 py manage.py runserver
 ```
 
+Так же нужно в backend/config/settings.py в DATABASES установить доступную базу данных.
 ### Зависимости
 Все необходимые библиотеки можно найти в файлах frontend/package.json и requirements.txt
