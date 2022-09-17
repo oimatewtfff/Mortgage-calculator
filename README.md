@@ -50,6 +50,7 @@ npm start
 ```
 
 ```shell
+# в корневой директории проекта
 py -m venv venv
 pip install -r requirements.txt
 ```
