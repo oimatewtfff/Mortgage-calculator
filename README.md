@@ -47,11 +47,12 @@
 npm install
 npm start
 ```
-
-* в директории backend
 ```shell
 py -m venv venv
 pip install -r requirements.txt
+```
+* в директории backend
+```shell
 py manage.py runserver
 ```
 
