@@ -41,13 +41,19 @@
 # Решение
 ## Решение выполнено с использованием React для фронтенда 
 ### Запуск решения
-```shell
-npm start
-```
+
 * в директории frontend
 ```shell
+npm install
+npm start
+```
+
+* в директории backend
+```shell
+py -m venv venv
+pip install -r requirements.txt
 py manage.py runserver
 ```
-* в директории backend
+
 ### Зависимости
 Все необходимые библиотеки можно найти в файлах frontend/package.json и requirements.txt
